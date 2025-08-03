@@ -1,0 +1,161 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  background-color: #FFF9E5;
+  color: #004030;
+  line-height: 1.6;
+}
+
+/* Hero section */
+.hero {
+  background-color: #004030;
+  color: #FFF9E5;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #DCD0A8;
+}
+
+/* Navigation */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  color: #FFF9E5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover,
+.nav a:focus {
+  text-decoration: underline;
+}
+
+/* Section styles */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-light {
+  background-color: #FFF9E5;
+  color: #004030;
+}
+
+.section-dark {
+  background-color: #4A9782;
+  color: #FFF9E5;
+}
+
+.section-beige {
+  background-color: #DCD0A8;
+  color: #004030;
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Accessibility */
+a:focus {
+  outline: 2px dashed #DCD0A8;
+  outline-offset: 4px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+ 
+
+}
+
+/* Gallery Carousel */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel img {
+    max-width: 300px;
+  }
+}
+#gallery {
+  background-color: #2BAC8C; /* mismo fondo que .music */
+  color: white;              /* texto blanco si hay alguno */
+  padding: 20px;             /* mismo espaciado interno */
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+#gallery img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
